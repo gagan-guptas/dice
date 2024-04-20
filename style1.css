@@ -1,0 +1,166 @@
+/* Add styles for dice images and shake animation */
+/* General Styles */
+body {
+    color:#003049;
+    font-size:30px;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fdf0d5;
+  }
+  
+  h1 {
+    color:#780000;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 100px;
+  }
+  
+  p {
+    color:#bc3908;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive Layouts */
+  @media (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+    h1 {
+      font-size: 1.5em; /* Adjust heading size on smaller screens */
+    }
+  
+    p, button {
+      font-size: 0.8em; /* Adjust text size on smaller screens */
+    }
+  
+    #dice-container {
+      flex-wrap: wrap; /* Wrap dice images on smaller screens */
+      justify-content: center;
+    }
+  
+    .dice {
+      width: 80px;
+      height: 80px; /* Adjust dice image size on smaller screens */
+    }
+  }
+  
+  /* Prediction Input Area */
+  #userPrediction {
+    width: 120px;
+    height: 35px;
+    padding: 5px;
+    border: 2px solid #010000;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #userPrediction:focus {
+    outline: none;
+    border-color: #333;
+  }
+/* CSS */
+.button-56 {
+  align-items: center;
+  background-color: #b5838d;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  margin-top:-46px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+  
+  button:hover {
+    background-color: #f4acb7;
+  }
+  
+  /* Dice Container */
+  #dice-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 0;
+  }
+  
+  .dice {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Result Text */
+  #result {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+img.dice {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    position: relative; /* Required for animation positioning */
+}
+
+img.dice.shake {
+    animation: shake 0.7s linear infinite; /* Adjusted animation duration */
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg) translateX(0px); }
+    25% { transform: rotate(15deg) translateX(5px); }
+    50% { transform: rotate(-15deg) translateX(-5px); }
+    75% { transform: rotate(15deg) translateX(5px); }
+    100% { transform: rotate(0deg) translateX(0px); }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Prediction</title>
+    <link rel="stylesheet" href="style1.css"> </head>
+<body>
+    <h1>Dice Roll Prediction</h1>
+
+    <p>Enter your prediction for the total roll (2-12):</p>
+    <input type="number" id="userPrediction" min="2" max="12">
+    <button class="button-56" role="button" onclick="predictRoll()">Predict</button>
+
+    <br>
+
+    <div id="dice-container">
+        <img id="die-1" class="dice" src="dice-01.svg" alt="Die 1">
+        <img id="die-2" class="dice" src="dice-01.svg" alt="Die 2">
+    </div>
+
+    <p id="result"></p>
+
+    <script src="script1.js"></script> </body>
+</html>
